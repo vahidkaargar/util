@@ -1,7 +1,7 @@
 <?php
 
 
-namespace vahidkaargar\tools;
+namespace vahidkaargar\util;
 
 
 class Json
