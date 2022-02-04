@@ -21,6 +21,7 @@ class Http
     public function client()
     {
         $this->client = new Client();
+        return $this;
     }
 
     public function request($method, $url, $options = [])
