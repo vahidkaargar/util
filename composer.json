@@ -1,0 +1,24 @@
+{
+  "name": "vahidkaargar/tools",
+  "description": "Some simple tools",
+  "type": "library",
+  "homepage": "https://github.com/vahidkaargar/tools",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vahid Kaargar",
+      "email": "vahidkaargar@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "vahidkaargar\\tools\\": "src/"
+    }
+  },
+  "require": {
+    "ext-json": "*"
+  },
+  "require-dev": {
+  }
+}
+
