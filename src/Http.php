@@ -25,7 +25,7 @@ class Http
 
     public function request($method, $url, $options = [])
     {
-        $request = $this->client->request('GET', $url, $options);
+        $request = $this->client->request($method, $url, $options);
         $response = [
             'success' => false,
             'message' => 'Request status code is not 200'
