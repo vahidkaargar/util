@@ -4,7 +4,7 @@
 namespace vahidkaargar\util;
 
 use GuzzleHttp\Client;
-
+use Illuminate\Support\Facades\Cache;
 
 class Http
 {
@@ -34,5 +34,14 @@ class Http
         if ($request->getStatusCode() === 200)
             $response = Json::decode($request->getBody()->getContents());
         return $response;
+    }
+
+    public function requestWithCache($method, $url, $options = [])
+    {
+        $cache = $options['_cache'];
+        unset($options['_cache']);
+        return Json::decode(Cache::remember($cache['key'], $cache['seconds'], function () use ($method, $url, $options) {
+            return Json::encode($this->request($method, $url, $options));
+        }));
     }
 }
