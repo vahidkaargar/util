@@ -40,8 +40,8 @@ class Http
     {
         $cache = $options['_cache'];
         unset($options['_cache']);
-        return Json::decode(Cache::remember($cache['key'], $cache['seconds'], function () use ($method, $url, $options) {
-            return Json::encode($this->request($method, $url, $options));
-        }));
+        return Cache::remember($cache['key'], $cache['seconds'], function () use ($method, $url, $options) {
+            return $this->request($method, $url, $options);
+        });
     }
 }
