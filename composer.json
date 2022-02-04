@@ -16,7 +16,8 @@
     }
   },
   "require": {
-    "ext-json": "*"
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.0.1"
   },
   "require-dev": {
   }
