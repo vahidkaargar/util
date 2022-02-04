@@ -1,8 +1,8 @@
 {
-  "name": "vahidkaargar/tools",
+  "name": "vahidkaargar/util",
   "description": "Some simple tools",
   "type": "library",
-  "homepage": "https://github.com/vahidkaargar/tools",
+  "homepage": "https://github.com/vahidkaargar/util",
   "license": "MIT",
   "authors": [
     {
@@ -12,7 +12,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "vahidkaargar\\tools\\": "src/"
+      "vahidkaargar\\uril\\": "src/"
     }
   },
   "require": {
